@@ -7,4 +7,4 @@
 **/*/*.iml
 **/*/*.ipr
 **/*/target/
-chapter-sec/spring-cloud-spi/
+chapter-sec/spring-cloud-spi/**
