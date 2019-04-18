@@ -1,0 +1,9 @@
+.DS_Store
+**/*/.mvn
+**/*/.DS_Store
+**/.DS_Store
+**/*/.idea
+**/*/*.iws
+**/*/*.iml
+**/*/*.ipr
+**/*/target/
