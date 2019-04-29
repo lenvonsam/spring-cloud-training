@@ -1,0 +1,30 @@
+package sam.trial.consumer.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("client")
+@RefreshScope
+public class HelloController {
+
+    @Value("${server.port}")
+    private int appPort;
+
+    @GetMapping("hello")
+    public String hello() {
+        return "http client hello world from client-1 port " + appPort;
+    }
+
+    @Value("${test.word}")
+    private String testWord;
+
+    @GetMapping("testWord")
+    public String testWord() {
+        return "remote git repo test.word value:>>>" + testWord;
+    }
+
+}
